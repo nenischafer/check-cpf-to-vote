@@ -22,7 +22,7 @@ def validar_cpf(cpf: str) -> bool:
     return cpf[-2:] == f"{primeiro_digito}{segundo_digito}"
 
 
-@app.route('/consulta-cpf/<cpf>', methods=['GET'])
+@app.route('api/v1/consulta-cpf/<cpf>', methods=['GET'])
 def consulta_cpf(cpf):
     
     if not validar_cpf(cpf):
